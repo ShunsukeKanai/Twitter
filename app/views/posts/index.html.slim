@@ -1,2 +1,13 @@
 h1 全てのつぶやき
 = link_to 'つぶやく', new_post_path, class: 'btn btn-primary'
+
+
+- @posts.each do |post|
+  .m-3
+    .card
+      .card-header 
+        | ユーザーネームとアイコン
+      .card-body
+        h5.card-title 
+          | #{post.content}
+        a href=new_post_path class='btn btn-primary' 新しいつぶやき
