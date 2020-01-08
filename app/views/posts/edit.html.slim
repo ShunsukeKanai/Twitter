@@ -1,2 +1,5 @@
-h1 Posts#edit
-p Find me in app/views/posts/edit.html.slim
+h1 つぶやき編集
+
+=render partial: 'home'
+
+= render partial: 'form', locals: { post: @post}

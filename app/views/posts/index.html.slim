@@ -18,6 +18,7 @@ h1 全てのつぶやき
       .card-body
         h5.card-title 
           | #{post.content}
-        a href=post_path(post) class='btn btn-primary mr-3' 詳細
-        a href=new_post_path class='btn btn-success mr-3' 編集
-        a href=new_post_path class='btn btn-danger' 削除
+        = link_to '詳細', post_path(post), class: 'btn btn-primary mr-3'
+        = link_to '編集', edit_post_path(post), class: 'btn btn-success mr-3'
+        = link_to '削除', edit_post_path(post), class: 'btn btn-danger'
+        
