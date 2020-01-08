@@ -20,5 +20,5 @@ h1 全てのつぶやき
           | #{post.content}
         = link_to '詳細', post_path(post), class: 'btn btn-primary mr-3'
         = link_to '編集', edit_post_path(post), class: 'btn btn-success mr-3'
-        = link_to '削除', edit_post_path(post), class: 'btn btn-danger'
+        = link_to '削除', post, method: :delete, data: { confirm: 'つぶやきを削除します。よろしいですか？' }, class: 'btn btn-danger'
         
