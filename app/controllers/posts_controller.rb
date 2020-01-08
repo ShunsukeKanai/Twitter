@@ -27,6 +27,12 @@ class PostsController < ApplicationController
     redirect_to posts_url, notice: 'つぶやきを更新しました'
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to posts_url, notice: 'つぶやきを削除しました'
+  end
+
   private
 
   def post_params
