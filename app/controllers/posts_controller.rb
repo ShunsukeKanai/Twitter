@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = current_user.post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
   end
 
   def new
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = current_user.post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
   end
 
   def update
